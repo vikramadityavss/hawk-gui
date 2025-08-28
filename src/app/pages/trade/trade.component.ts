@@ -9,4 +9,3 @@ import { Component } from '@angular/core';
 export class TradeComponent {
 
 }
-export { TradeComponent as default };
