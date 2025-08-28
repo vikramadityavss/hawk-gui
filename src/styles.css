@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Public Sans', sans-serif;
+  background-color: #f8fafc !important;
+
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.mat-sidenav-container {
+  height: 100vh;
+}
+
+.mat-sidenav-content {
+  overflow-y: auto;
+  height: 100%;
+  margin-left: 230px !important;
+}

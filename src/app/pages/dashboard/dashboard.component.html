@@ -1,0 +1,81 @@
+<div class="layout">
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="content-wrapper">
+      <div class="card">
+        <h1 class="title">DBS One Finance Platform</h1>
+        <p class="subtitle">
+          Welcome to your corporate treasury dashboard. The sidenav replicates the exact design 
+          from your screenshots with full expand/collapse functionality.
+        </p>
+
+        <div class="grid-cards">
+          <mat-card class="card-blue">
+            <mat-card-header>
+              <mat-card-title class="card-title-blue">
+                <mat-icon class="card-icon-blue">calculate</mat-icon>
+                Hedge Accounting
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="card-text-blue">
+                Manage your hedge accounting workflows and SFX operations with comprehensive tools.
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="card-green">
+            <mat-card-header>
+              <mat-card-title class="card-title-green">
+                <mat-icon class="card-icon-green">account_balance</mat-icon>
+                Portfolio Management
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="card-text-green">
+                Oversee funding and portfolio management activities with advanced analytics.
+              </p>
+            </mat-card-content>
+          </mat-card>
+
+          <mat-card class="card-purple">
+            <mat-card-header>
+              <mat-card-title class="card-title-purple">
+                <mat-icon class="card-icon-purple">assessment</mat-icon>
+                System Logs
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p class="card-text-purple">
+                Access comprehensive system logs, reports, and audit trails.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div class="features">
+          <h4 class="features-heading">
+            <mat-icon class="features-icon">check_circle</mat-icon>
+            Features Implemented
+          </h4>
+          <div class="features-grid">
+            <ul class="features-list">
+              <li><mat-icon class="features-check">done</mat-icon> Exact visual replica of DBS design</li>
+              <li><mat-icon class="features-check">done</mat-icon> Full expand/collapse functionality</li>
+              <li><mat-icon class="features-check">done</mat-icon> Expandable menu sections</li>
+              <li><mat-icon class="features-check">done</mat-icon> Angular Material integration</li>
+            </ul>
+            <ul class="features-list">
+              <li><mat-icon class="features-check">done</mat-icon> Responsive design</li>
+              <li><mat-icon class="features-check">done</mat-icon> Smooth animations</li>
+              <li><mat-icon class="features-check">done</mat-icon> Public Sans font integration</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Router Outlet for child routes -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

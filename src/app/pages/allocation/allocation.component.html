@@ -1,0 +1,110 @@
+<!-- Sticky Page Header -->
+<div class="allocation-page-header">
+  <div class="header-titles">
+    <div class="header-nav-group">Hedge Accounting SFX</div>
+    <div class="header-submenu">Configuration</div>
+  </div>
+
+  <!-- Date Picker
+  <mat-form-field appearance="outline" class="date-picker">
+    <mat-label>Select Date</mat-label>
+    <input matInput [matDatepicker]="picker" />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field> -->
+</div>
+
+<!-- Table Section -->
+<div class="allocation-wrapper">
+  <div class="allocation-container mat-elevation-z2">
+
+    <!-- Table Header with Refresh -->
+    <div class="table-header">
+      <h2 class="section-title">Hedge Allocation</h2>
+      <button mat-button class="refresh-btn" (click)="refreshAllocation()">
+        <mat-icon>refresh</mat-icon>
+        <span>Refresh</span>
+      </button>
+    </div>
+
+    <!-- Angular Material Table -->
+    <table mat-table [dataSource]="dataSource" matSort class="mat-table allocation-table">
+
+      <!-- SFX Entity -->
+      <ng-container matColumnDef="sfxEntity">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SFX Entity</th>
+        <td mat-cell *matCellDef="let row">{{ row.sfxEntity }}</td>
+      </ng-container>
+
+      <!-- Entity Type -->
+      <ng-container matColumnDef="entityType">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Entity Type</th>
+        <td mat-cell *matCellDef="let row">{{ row.entityType }}</td>
+      </ng-container>
+
+      <!-- CAR Exemption -->
+      <ng-container matColumnDef="carExemption">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>CAR Exemption</th>
+        <td mat-cell *matCellDef="let row">{{ row.carExemption ? 'Yes' : 'No' }}</td>
+      </ng-container>
+
+      <!-- Entity Total NAV -->
+      <ng-container matColumnDef="entityTotalNAV">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Entity Total NAV</th>
+        <td mat-cell *matCellDef="let row">{{ row.entityTotalNAV | number }}</td>
+      </ng-container>
+
+      <!-- Optimal CAR -->
+      <ng-container matColumnDef="optimalCAR">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Optimal CAR</th>
+        <td mat-cell *matCellDef="let row">{{ row.optimalCAR | number }}</td>
+      </ng-container>
+
+      <!-- Allocation -->
+      <ng-container matColumnDef="allocation">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Allocation</th>
+        <td mat-cell *matCellDef="let row">{{ row.allocation | number }}</td>
+      </ng-container>
+
+      <!-- SFX to Close -->
+      <ng-container matColumnDef="sfxToClose">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>SFX to Close (Pre adj)</th>
+        <td mat-cell *matCellDef="let row">{{ row.sfxToClose | number }}</td>
+      </ng-container>
+
+      <!-- Manual Overlay Amt -->
+      <ng-container matColumnDef="manualOverlayAmt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Manual Overlay Amt</th>
+        <td mat-cell *matCellDef="let row">{{ row.manualOverlayAmt | number }}</td>
+      </ng-container>
+
+      <!-- Buffer % -->
+      <ng-container matColumnDef="bufferPercent">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Buffer %</th>
+        <td mat-cell *matCellDef="let row">{{ row.bufferPercent }}%</td>
+      </ng-container>
+
+      <!-- Buffer Amt -->
+      <ng-container matColumnDef="bufferAmt">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Buffer Amt</th>
+        <td mat-cell *matCellDef="let row">{{ row.bufferAmt | number }}</td>
+      </ng-container>
+
+      <!-- Hedged Position -->
+      <ng-container matColumnDef="hedgedPosition">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Hedged Position</th>
+        <td mat-cell *matCellDef="let row">{{ row.hedgedPosition | number }}</td>
+      </ng-container>
+
+      <!-- Available Amt for Hedging -->
+      <ng-container matColumnDef="availableAmtForHedging">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Available Amt for Hedging</th>
+        <td mat-cell *matCellDef="let row">{{ row.availableAmtForHedging | number }}</td>
+      </ng-container>
+
+      <!-- Render Header & Rows -->
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

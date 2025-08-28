@@ -1,0 +1,9 @@
+<mat-sidenav-container class="main-container">
+  <mat-sidenav #drawer mode="side" [(opened)]="isSidebarOpen">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="main-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

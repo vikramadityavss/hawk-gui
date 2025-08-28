@@ -1,0 +1,190 @@
+/* Page Header */
+.allocation-page-header {
+  height: 86px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  border-bottom: 1px solid #dde3e7;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-nav-group {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172733;
+}
+
+.header-submenu {
+  font-size: 14px;
+  font-weight: 400;
+  color: #172733;
+  margin-top: 8px;
+}
+
+/* Date Picker */
+.date-picker {
+  width: 180px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #dde3e7;
+}
+
+/* Table Container */
+.allocation-wrapper {
+  padding: 24px;
+}
+
+.allocation-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 16px 8px;
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.05),
+    0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Table Header with Refresh */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172733;
+  margin: 0;
+}
+
+.refresh-btn {
+  background-color: #ffffff;
+  color: #172733;
+  border-radius: 2px;
+  font-weight: 500;
+  height: 36px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #dde3e7;
+  box-shadow:
+    0px 2px 4px rgba(0, 0, 0, 0.05),
+    0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Table Styling */
+.mat-table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.mat-header-cell,
+.mat-cell {
+  padding: 0 12px;
+  height: 44px;
+  font-size: 14px;
+  color: #172733;
+  text-align: left;
+}
+
+.mat-header-row {
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
+.mat-row {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .allocation-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .header-titles {
+    align-items: flex-start;
+  }
+
+  .date-picker {
+    width: 100%;
+  }
+}
+
+.date-picker {
+  background-color: #ffffff;
+  border-radius: 2px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #172733;
+  border: 1px solid #dde3e7;
+  box-shadow: none;
+}
+
+.date-picker mat-label {
+  display: none; /* optional: hide floating label */
+}
+
+.date-picker .mat-mdc-form-field-infix {
+  padding: 0 !important;
+  border: none;
+  font-size: 14px;
+}
+
+.date-picker input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0;
+  width: 100px;
+  color: #172733;
+  font-family: inherit;
+}
+
+.date-picker .mat-datepicker-toggle {
+  margin-right: 8px;
+  color: #172733;
+  font-size: 18px;
+}
+
+.date-picker .mat-icon {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.allocation-table thead {
+  border-bottom: 1px solid #dde3e7; /* Same color as page header stroke */
+}
+
+.allocation-table th.mat-header-cell {
+  font-weight: 600;
+  font-size: 14px;
+  color: #172733;
+  background: #ffffff;
+  height: 44px;
+  padding: 0 16px;
+  text-align: left;
+  border-bottom: 1px solid #dde3e7;
+}
